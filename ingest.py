@@ -112,7 +112,7 @@ KNOWN_MODULES = [
     "Accounts Receivable", "Position Control",
 ]
 
-VERSION_PATTERN = re.compile(r"\b(\d+\.\d+(?:\.\d+)?)\b")
+VERSION_PATTERN = re.compile(r"(?<!\d)(\d+\.\d+(?:\.\d+)?)(?!\d)")
 
 
 def parse_metadata_from_filename(filename: str) -> dict:
