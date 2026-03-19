@@ -133,7 +133,7 @@ def generate_answer(question: str, chunks: list[SourceChunk]) -> str:
             {"role": "user", "content": user_message},
         ],
         temperature=0.1,   # Low temp for factual / grounded answers
-        max_tokens=1500,
+        max_tokens=800,
     )
 
     return response.choices[0].message.content.strip()
